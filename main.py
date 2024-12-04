@@ -18,7 +18,7 @@ async def main():
 
             await check_in(from_address)
             print(f"{Fore.CYAN}[{short_address}] Processing Daily Transactions: {short_address}{Style.RESET_ALL}")
-            await send_transactions(private_key, 1)
+            await send_transactions(private_key, 75)
 
         print(f"{Fore.YELLOW}All accounts processed. Sleeping for 24 hours...{Style.RESET_ALL}")
         await asyncio.sleep(24 * 60 * 60)
