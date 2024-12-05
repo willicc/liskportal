@@ -1,9 +1,10 @@
 import asyncio
 from banner import display_banner
-from config import web3
+from config import web3, num_daily_tx
 from check_in import check_in
 from transactions import send_transactions
 from colorama import Fore, Style
+
 # Load private keys
 with open("pvkeys.txt", "r") as file:
     private_keys = [line.strip() for line in file if line.strip()]
@@ -18,7 +19,7 @@ async def main():
 
             await check_in(from_address)
             print(f"{Fore.CYAN}[{short_address}] Processing Daily Transactions: {short_address}{Style.RESET_ALL}")
-            await send_transactions(private_key, 75)
+            await send_transactions(private_key, num_daily_tx)
 
         print(f"{Fore.YELLOW}All accounts processed. Sleeping for 24 hours...{Style.RESET_ALL}")
         await asyncio.sleep(24 * 60 * 60)
