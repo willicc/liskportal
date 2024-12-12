@@ -20,7 +20,7 @@ Lisk Portal is the gateway to the Lisk ecosystem, providing access to a cost-eff
 ## Instalation
 
 ```bash
-git clone https://github.com/Zlkcyber/liskportal.git
+git clone https://github.com/willicc/liskportal.git
 cd liskportal
 ```
 
